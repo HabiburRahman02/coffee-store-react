@@ -4,7 +4,7 @@ const Categories = ({ categories }) => {
 
     return (
         <div className="my-8">
-            <div role="tablist" className="tabs tabs-lifted">
+            <div role="tablist" className="tabs tabs-bordered">
                 {
                     categories.map(category =>
                         <NavLink key={category.category} to={`/category/${category.category}`} role="tab"
