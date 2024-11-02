@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const Main = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <div className="h-16"><Navbar></Navbar></div>
             <div className="my-14 min-h-[310px] max-w-[1300px] mx-auto px-2 md:px-0">
                 <Outlet></Outlet>
             </div>

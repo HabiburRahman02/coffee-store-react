@@ -3,7 +3,7 @@ import React from 'react';
 const CoffeeCard = ({ coffeeCard }) => {
     const { image, name, description, rating, popularity } = coffeeCard
     return (
-        <div className="card bg-base-100 w-full shadow-xl">
+        <div className="card bg-base-100 w-full shadow-xl hover:scale-105 transition-all">
             <figure>
                 <img
                     src={image}
@@ -16,8 +16,8 @@ const CoffeeCard = ({ coffeeCard }) => {
                 </h2>
                 <p>{description}?</p>
                 <div className="card-actions justify-between">
-                    <div className="badge badge-outline px-6">{rating}</div>
-                    <div className="badge badge-outline px-6">{popularity}</div>
+                    <div className="badge badge-outline px-6 py-3">Rating {rating}</div>
+                    <div className="badge badge-outline px-6 py-3">{popularity}</div>
                 </div>
             </div>
         </div>
