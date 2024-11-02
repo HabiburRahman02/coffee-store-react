@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import CoffeeCard from './CoffeeCard';
 import { data } from 'autoprefixer';
 
@@ -28,7 +28,9 @@ const CoffeeCards = () => {
                     ></CoffeeCard>)
                 }
             </div>
-            <button className='btn bg-green-600 btn-accent text-white mt-8'>See More Coffees</button>
+            <Link to='/coffees'>
+                <button className='btn bg-green-600 btn-accent text-white mt-8'>See More Coffees</button>
+            </Link>
         </div>
     );
 };

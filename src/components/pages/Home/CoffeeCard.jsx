@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CoffeeCard = ({ coffeeCard }) => {
-    const { image } = coffeeCard
+    const { image, name, description, rating, popularity } = coffeeCard
     return (
         <div className="card bg-base-100 w-full shadow-xl">
             <figure>
@@ -11,13 +11,13 @@ const CoffeeCard = ({ coffeeCard }) => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">
-                    Shoes!
+                    {name}
                     <div className="badge badge-secondary">NEW</div>
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
+                <p>{description}?</p>
+                <div className="card-actions justify-between">
+                    <div className="badge badge-outline px-6">{rating}</div>
+                    <div className="badge badge-outline px-6">{popularity}</div>
                 </div>
             </div>
         </div>
