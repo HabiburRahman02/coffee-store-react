@@ -10,6 +10,7 @@ import {
 import Main from './layout/Main.jsx';
 import Home from './components/pages/Home/Home.jsx';
 import Coffees from './components/pages/Coffees/Coffees.jsx';
+import CoffeeCards from './components/pages/Home/CoffeeCards.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,14 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('/categories.json')
+        loader: () => fetch('../categories.json'),
+        children: [
+          {
+            path: '/category/:category',
+            element: <CoffeeCards></CoffeeCards>,
+            loader: () => fetch('../coffees.json')
+          }
+        ]
       },
       {
         path: '/coffees',
