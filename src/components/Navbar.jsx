@@ -8,7 +8,7 @@ const Navbar = () => {
         <NavLink className={({ isActive }) => `mr-6 font- text-lg ${isActive && 'text-red-500'}`} to='/dashboard'>Dashboard</NavLink>
     </>
     return (
-        <div className='bg-base-200 fixed z-50 backdrop-blur-3xl w-full top-0 bg-white/90'>
+        <div className='bg-base-200 fixed z-50 backdrop-blur-3xl w-full top-0 bg-white/80'>
             <div className="navbar max-w-[1400px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
